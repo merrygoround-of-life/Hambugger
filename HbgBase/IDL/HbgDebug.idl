@@ -1,0 +1,62 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+#if defined(_WIN64)
+#	define HBG_PTR	unsigned __int64
+#elif defined(_WIN32)
+#	define HBG_PTR	DWORD_PTR
+#endif
+
+#if defined(_WIN64)
+#	if defined(_DEBUG)
+		[ object, uuid(703CCF94-6517-43bb-B16A-A27CC9675D64) ]
+#	else
+		[ object, uuid(703CCF94-6517-43bb-B16A-A27CC9675564) ]
+#	endif // _DEBUG
+#elif defined(_WIN32)
+#	if defined(_DEBUG)
+		[ object, uuid(703CCF94-6517-43bb-B16A-A27CC9675D86) ]
+#	else
+		[ object, uuid(703CCF94-6517-43bb-B16A-A27CC9675586) ]
+#	endif // _DEBUG
+#endif
+interface IHbgCallback : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT Prompt([in] DWORD type, [in] DWORD idThread, [in] SIZE_T szContext, [in, size_is((DWORD)szContext)] BYTE* pContext, [in] SIZE_T szMemoryStack, [in, size_is((DWORD)szMemoryStack)] BYTE* pMemoryStack, [in] SIZE_T szHbgContexts, [in, size_is((DWORD)szHbgContexts)] BYTE* pHbgContexts);
+	HRESULT Update([in] DWORD type, [in] SIZE_T sizeData, [in, size_is((DWORD)sizeData)] BYTE* pData);
+};
+
+#if defined(_WIN64)
+#	if defined(_DEBUG)
+		[ object, uuid(481927C2-29B8-4c96-B662-0C2440994D64) ]
+#	else
+		[ object, uuid(481927C2-29B8-4c96-B662-0C2440994564) ]
+#	endif // _DEBUG
+#elif defined(_WIN32)
+#	if defined(_DEBUG)
+		[ object, uuid(481927C2-29B8-4c96-B662-0C2440994D86) ]
+#	else
+		[ object, uuid(481927C2-29B8-4c96-B662-0C2440994586) ]
+#	endif // _DEBUG
+#endif
+interface IHbgDebug : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT Initialize([in, string] LPCWSTR pathDebuggee, [in] REFIID riid, [in, iid_is(riid)] IUnknown* pIUnkClbk);
+	HRESULT InitializeEx([in] DWORD pidDebuggee, [in] REFIID riid, [in, iid_is(riid)] IUnknown* pIUnkClbk);
+	HRESULT Uninitialize([in] BOOL bKillDebuggee);
+
+	HRESULT Go([in] HBG_PTR toAddr);																			// Prompt 상태에서 실행 가능
+	HRESULT Step([in] DWORD idThread);																			// Prompt 상태에서 실행 가능, Prompt 콜백 받음
+	HRESULT Break();																							// Unrompt 상태에서 실행 가능, Prompt 콜백 받음
+	
+	HRESULT ToggleBreakpoint([in] HBG_PTR addr, [out] BOOL* bSet);												// 언제나 실행 가능, 콜백 없음
+
+	HRESULT ReadMemory([in] HBG_PTR addr, [in] SIZE_T size, [in, out, size_is((DWORD)size)] BYTE* pByte);		// Unprompt 상태에서 실행 가능, 콜백 없음
+	HRESULT WriteMemory([in] HBG_PTR addr, [in] SIZE_T size, [in, size_is((DWORD)size)] BYTE* pByte);			// "
+	HRESULT ReadContext([in] DWORD idThread, [in] SIZE_T size, [in, out, size_is((DWORD)size)] BYTE* pByte);	// "
+	HRESULT WriteContext([in] DWORD idThread, [in] SIZE_T size, [in, size_is((DWORD)size)] BYTE* pByte);		// "
+};

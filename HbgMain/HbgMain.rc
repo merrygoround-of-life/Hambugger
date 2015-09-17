@@ -1,0 +1,568 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\HbgMain.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""          // 표준 구성 요소입니다.\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""l.KOR\\afxprint.rc""                // 인쇄 미리 보기 리소스\r\n"
+    "#include ""l.KOR\\afxribbon.rc""               // MFC 리본 및 컨트롤 막대 리소스\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HbgMain.ico"
+IDR_HambuggerTYPE       ICON                    "res\\HbgMainDoc.ico"
+IDI_PANES_WND           ICON                    "res\\panes_wnd.ico"
+IDI_PANES_WND_HC        ICON                    "res\\panes_wnd_hc.ico"
+IDI_BREAKPOINT          ICON                    "res\\breakpoint.ico"
+IDI_MODULE              ICON                    "res\\module.ico"
+IDI_THREAD              ICON                    "res\\thread.ico"
+IDI_REGISTER            ICON                    "res\\register.ico"
+IDI_STACK               ICON                    "res\\stack.ico"
+IDI_MEMORY              ICON                    "res\\memory.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+IDR_DEBUG_256           BITMAP                  "res\\DebugToolbar256.bmp"
+IDR_PANES               BITMAP                  "res\\panes.bmp"
+IDB_PROPERTIES_HC       BITMAP                  "res\\panes_hc.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_VIEW_LARGEICON
+    BUTTON      ID_VIEW_SMALLICON
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MAINFRAME_256 TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_VIEW_LARGEICON
+    BUTTON      ID_VIEW_SMALLICON
+    BUTTON      ID_VIEW_LIST
+    BUTTON      ID_VIEW_DETAILS
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_PANES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EXPAND_ALL
+    BUTTON      ID_SORTPROPERTIES
+    BUTTON      ID_PROPERTIES1
+    BUTTON      ID_PROPERTIES2
+END
+
+IDR_DEBUG_256 TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_DEBUG_OPEN
+    BUTTON      ID_DEBUG_ATTACH
+    BUTTON      ID_DEBUG_EXIT
+    BUTTON      ID_DEBUG_DETACH
+    SEPARATOR
+    BUTTON      ID_DEBUG_RESTART
+    BUTTON      ID_DEBUG_PAUSE
+    SEPARATOR
+    BUTTON      ID_DEBUG_GO
+    BUTTON      ID_DEBUG_STEPIN
+    BUTTON      ID_DEBUG_STEPOUT
+    BUTTON      ID_DEBUG_RUN_TILL_CUR
+    BUTTON      ID_DEBUG_ORIGIN
+    BUTTON      ID_DEBUG_MOVE
+    SEPARATOR
+    BUTTON      ID_DEBUG_TOGGLE_BP
+    SEPARATOR
+    BUTTON      ID_HBG_REGISTER
+    BUTTON      ID_HBG_UNREGISTER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새로 만들기(&N)\tCtrl+N",          ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "저장(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "다른 이름으로 저장(&A)...",           ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "최근에 사용한 파일",                  ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "응용 프로그램 열기...",               ID_DEBUG_OPEN
+        MENUITEM "프로세스 연결...",                  ID_DEBUG_ATTACH
+        MENUITEM "응용 프로그램 종료",                  ID_DEBUG_EXIT
+        MENUITEM "프로세스 분리",                     ID_DEBUG_DETACH
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)\tCtrl+Z",           ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",            ID_EDIT_PASTE
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        POPUP "도구 모음 및 도킹 창(&T)"
+        BEGIN
+            MENUITEM "<자리 표시자>",                    ID_VIEW_TOOLBAR
+            MENUITEM "<자리 표시자>",                    ID_VIEW_DEBUG_256
+        END
+        MENUITEM "상태 표시줄(&S)",                  ID_VIEW_STATUS_BAR
+        POPUP "응용 프로그램 모양(&A)"
+        BEGIN
+            MENUITEM "Windows 2000(&2)",            ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office XP(&X)",               ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "Windows XP(&W)",              ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 2003(&3)",             ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio.NET 2005(&5)",  ID_VIEW_APPLOOK_VS_2005
+            POPUP "Office 2007(&7)"
+            BEGIN
+                MENUITEM "파랑 스타일(&B)",                  ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "검정 스타일(&L)",                  ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "은색 스타일(&S)",                  ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "바다색 스타일(&A)",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "디버그(&D)"
+    BEGIN
+        MENUITEM "다시 시작",                       ID_DEBUG_RESTART
+        MENUITEM "모두 중단",                       ID_DEBUG_PAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "계속(&S)",                      ID_DEBUG_GO
+        MENUITEM "한 단계씩 코드 실행(&I)",             ID_DEBUG_STEPIN
+        MENUITEM "프로시저 단위 실행(&O)",              ID_DEBUG_STEPOUT
+        MENUITEM "커서까지 실행(&N)",                 ID_DEBUG_RUN_TILL_CUR
+        MENUITEM "다음 문 표시",                     ID_DEBUG_ORIGIN
+        MENUITEM "이동...",                       ID_DEBUG_MOVE
+        MENUITEM SEPARATOR
+        MENUITEM "중단점 설정/해제(&G)",               ID_DEBUG_TOGGLE_BP
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "Hambugger 등록",                ID_HBG_REGISTER
+        MENUITEM "Hambugger 해제",                ID_HBG_UNREGISTER
+        MENUITEM SEPARATOR
+        MENUITEM "HbgMain 정보(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_EDIT MENU 
+BEGIN
+    POPUP "편집"
+    BEGIN
+        MENUITEM "잘라내기(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "복사(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "붙여넣기(&P)\tCtrl+V",            ID_EDIT_PASTE
+    END
+END
+
+IDR_THEME_MENU MENU 
+BEGIN
+    MENUITEM "Office 2007(파랑 스타일)(&B)",     ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007(검정 스타일)(&L)",     ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007(은색 스타일)(&S)",     ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007(바다색 스타일)(&A)",    ID_VIEW_APPLOOK_OFF_2007_AQUA
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F2,          ID_DEBUG_EXIT,          VIRTKEY, ALT, NOINVERT
+    VK_F9,          ID_DEBUG_GO,            VIRTKEY, NOINVERT
+    "G",            ID_DEBUG_MOVE,          VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          ID_DEBUG_OPEN,          VIRTKEY, NOINVERT
+    VK_F2,          ID_DEBUG_RESTART,       VIRTKEY, CONTROL, NOINVERT
+    VK_F9,          ID_DEBUG_RUN_TILL_CUR,  VIRTKEY, CONTROL, NOINVERT
+    VK_F7,          ID_DEBUG_STEPIN,        VIRTKEY, NOINVERT
+    VK_F8,          ID_DEBUG_STEPOUT,       VIRTKEY, NOINVERT
+    VK_F2,          ID_DEBUG_TOGGLE_BP,     VIRTKEY, NOINVERT
+    VK_F12,         ID_DEBUG_PAUSE,         VIRTKEY, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PID_DIALOG DIALOGEX 0, 0, 171, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HbgMain"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PID_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,157,121
+    LTEXT           "프로세스 ID: ",IDC_PID_STATIC,7,140,47,8
+    EDITTEXT        IDC_PID_EDIT,54,137,52,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "새로 고침",IDC_PID_REFRESH,114,137,50,14
+    DEFPUSHBUTTON   "확인",IDOK,58,159,50,14
+    PUSHBUTTON      "취소",IDCANCEL,114,159,50,14
+END
+
+IDD_ADDRESS_DIALOG DIALOGEX 0, 0, 121, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HbgMain"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ADDRESS_EDIT,21,24,77,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,6,44,50,14
+    PUSHBUTTON      "취소",IDCANCEL,64,44,50,14
+    LTEXT           "주소 입력:",IDC_ADDRESS_STATIC,23,11,38,8
+END
+
+IDD_PATCH_DIALOG DIALOGEX 0, 0, 223, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "패치"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "hex:",IDC_PATCH_STATIC1,7,7,33,8
+    EDITTEXT        IDC_PATCH_EDIT,7,18,209,43,ES_MULTILINE | WS_VSCROLL
+    LTEXT           "",IDC_PATCH_STATIC2,7,67,87,8
+    EDITTEXT        IDC_INFO_EDIT,7,78,209,43,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,109,130,50,14
+    PUSHBUTTON      "취소",IDCANCEL,166,130,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PID_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_PATCH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Hambugger\n\nHambugger\nHambugger Files (*.hbg)\n.hbg\nHambugger.Document\nHambugger.Document"
+    IDS_TOOLBAR_DEBUG       "디버그"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "HbgMain"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "새 문서를 만듭니다.\n새로 만들기"
+    ID_FILE_OPEN            "기존 문서를 엽니다.\n열기"
+    ID_FILE_CLOSE           "활성 문서를 닫습니다.\n닫기"
+    ID_FILE_SAVE            "활성 문서를 저장합니다.\n저장"
+    ID_FILE_SAVE_AS         "활성 문서를 새 이름으로 저장합니다.\n다른 이름으로 저장"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호, 저작권을 표시합니다.\n정보"
+    ID_APP_EXIT             "문서를 저장할지를 묻고 응용 프로그램을 끝냅니다.\n끝내기"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE2       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE3       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE4       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE5       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE6       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE7       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE8       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE9       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE10      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE11      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE12      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE13      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE14      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE15      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE16      "현재 문서를 엽니다."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "다음 창으로 전환합니다.\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다.\n이전 창"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "활성 창을 여러 개의 창으로 분할합니다.\n분할"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "선택 영역을 지웁니다.\n지우기"
+    ID_EDIT_CLEAR_ALL       "모두 지웁니다.\n모두 지우기"
+    ID_EDIT_COPY            "선택 영역을 복사하여 클립보드에 넣습니다.\n복사"
+    ID_EDIT_CUT             "선택 영역을 잘라내어 클립보드에 넣습니다.\n잘라내기"
+    ID_EDIT_FIND            "지정한 텍스트를 찾습니다.\n찾기"
+    ID_EDIT_PASTE           "클립보드 내용을 삽입합니다.\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막 작업을 반복합니다.\n반복"
+    ID_EDIT_REPLACE         "특정 텍스트를 다른 텍스트로 바꿉니다.\n바꾸기"
+    ID_EDIT_SELECT_ALL      "전체 문서를 선택합니다.\n모두 선택"
+    ID_EDIT_UNDO            "마지막 작업 실행을 취소합니다.\n실행 취소"
+    ID_EDIT_REDO            "이전에 실행 취소된 작업을 다시 실행합니다.\n다시 실행"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 숨깁니다.\n상태 표시줄 설정/해제"
+    ID_VIEW_AUTOARRANGE     "모눈에 맞춰 아이콘을 정렬합니다."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "창 크기를 변경합니다."
+    AFX_IDS_SCMOVE          "창 위치를 변경합니다."
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 축소합니다."
+    AFX_IDS_SCMAXIMIZE      "창을 전체 화면 크기로 확대합니다."
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다."
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다."
+    AFX_IDS_SCCLOSE         "문서를 저장할 것인지 확인하고 활성 창을 닫습니다."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "창을 보통 크기로 복원합니다."
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "작은 아이콘을 사용하여 항목을 표시합니다.\n작은 아이콘"
+    ID_VIEW_LARGEICON       "큰 아이콘을 사용하여 항목을 표시합니다.\n큰 아이콘"
+    ID_VIEW_LIST            "항목을 목록으로 표시합니다.\n간단히"
+    ID_VIEW_DETAILS         "각 항목에 대한 자세한 정보를 창에 표시합니다.\n자세히"
+    ID_VIEW_LINEUP          "모눈에 맞춰 아이콘을 정렬합니다."
+    ID_VIEW_BYNAME          "사전순으로 아이콘을 정렬합니다."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DEBUG_GO             "디버깅을 계속합니다.\n계속"
+    ID_DEBUG_STEPIN         "어셈블리 단위로 코드를 실행합니다.\n한 단계씩 코드 실행"
+    ID_DEBUG_STEPOUT        "프로시저 단위로 코드를 실행합니다.\n프로시저 단위 실행"
+    ID_DEBUG_RUN_TILL_CUR   "커서가 있는 위치까지 코드를 실행합니다.\n커서까지 실행"
+    ID_DEBUG_TOGGLE_BP      "중단점을 설정하거나 해제합니다.\n중단점 설정/해제"
+    ID_DEBUG_OPEN           "응용 프로그램을 열어 디버깅을 시작합니다.\n응용 프로그램 열기"
+    ID_DEBUG_ATTACH         "실행 중인 프로세스를 연결하여 디버깅을 시작합니다.\n프로세스 연결"
+    ID_DEBUG_EXIT           "응용 프로그램의 디버깅을 종료합니다.\n응용 프로그램 종료"
+    ID_DEBUG_DETACH         "프로세스에서 디버거를 분리하여 디버깅을 종료합니다.\n프로세스 분리"
+    ID_DEBUG_RESTART        "응용 프로그램의 디버깅을 다시 시작합니다.\n다시 시작"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DEBUG_PAUSE          "디버깅 중인 프로세스의 모든 스레드를 중단합니다.\n모두 중단"
+    ID_DEBUG_ORIGIN         "다음에 실행될 코드의 위치를 보여줍니다.\n다음 문 표시"
+    ID_DEBUG_MOVE           "입력한 위치의 코드를 보여줍니다.\n이동"
+    ID_HBG_REGISTER         "디버거 서버를 등록합니다.\nHambugger 등록"
+    ID_HBG_UNREGISTER       "등록된 디버거 서버의 정보를 제거합니다.\nHambugger 해제"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STATUS_PANE1        "창 1"
+    IDS_STATUS_PANE2        "창 2"
+    IDS_TOOLBAR_STANDARD    "표준"
+    IDS_TOOLBAR_CUSTOMIZE   "사용자 지정..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTERS_WND       "레지스터"
+    IDS_MEMORY_WND          "메모리"
+    IDS_BREAKPOINTS_WND     "중단점"
+    IDS_STACK_WND           "스택"
+    IDS_MODULES_WND         "모듈"
+    IDS_THREADS_WND         "스레드"
+    ID_INDICATOR_DEBUG_CONNECTED "연결됨"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDIT_MENU           "편집"
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\HbgMain.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"          // 표준 구성 요소입니다.
+#if !defined(_AFXDLL)
+#include "l.KOR\afxprint.rc"                // 인쇄 미리 보기 리소스
+#include "l.KOR\afxribbon.rc"               // MFC 리본 및 컨트롤 막대 리소스
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

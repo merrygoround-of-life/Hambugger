@@ -1,0 +1,72 @@
+//
+// HbgMain.RC2 - Microsoft Visual C++에서 직접 편집하지 않는 리소스
+//
+
+#ifdef APSTUDIO_INVOKED
+#error 이 파일은 Microsoft Visual C++에서 편집할 수 없습니다.
+#endif //APSTUDIO_INVOKED
+
+#include "HbgBase/HbgVersions.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 여기에 수동으로 편집한 리소스를 추가합니다.
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HbgMain 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           HBG_PLATFORMPRODUCTNAME,IDC_STATIC,42,14,60,8,SS_NOPREFIX
+    LTEXT           HBG_VERSION_STR,IDC_STATIC,105,14,30,8
+    LTEXT           HBG_COPYRIGHT,IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "확인",IDOK,113,41,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION HBG_VERSION
+ PRODUCTVERSION HBG_VERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "CompanyName", HBG_COMPANYNAME
+            VALUE "FileDescription", "Hambugger Client"
+            VALUE "FileVersion", HBG_VERSION_STR
+            VALUE "InternalName", HBG_HBGMAIN
+            VALUE "LegalCopyright", HBG_COPYRIGHT
+            VALUE "OriginalFilename", "HbgMain.exe"
+            VALUE "ProductName", HBG_PLATFORMPRODUCTNAME
+            VALUE "ProductVersion", HBG_VERSION_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
